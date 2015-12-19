@@ -20,7 +20,7 @@ var cursor = {
   y: 0 
 }
 
-$("#game-cursor").mousemove(function(event)){
+$("#game-canvas").mousemove(function(event)){
   cursor.x = event.pageX;
   cursor.y = event.pageY;
 }
