@@ -11,6 +11,13 @@ var SmallTowerImg = document.createElement("img");
 SmallTowerImg.src = "images/tower.png";
 
 var isBuilding = false;
+$("#game-canvas").click(
+  function(){
+    if(cursor.x > 0 && cursor.x < 64 && cursor.y > 0 && cursor.y < 64){
+      isBuilding = !isBuilding
+    }
+  }
+);
 
 
 var hero = {
@@ -44,8 +51,10 @@ $("#game-canvas").mousemove(
 function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
-  ctx.drawImage(towerImg, 575, 400, 64, 64 );
-  ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
+  ctx.drawImage(towerImg, 0, 0, 64, 64 );
+  if(isBuilding === true){
+    ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
+  }
 }
 
 
