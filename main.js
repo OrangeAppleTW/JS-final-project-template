@@ -20,10 +20,12 @@ var cursor = {
   y: 0 
 }
 
-$("#game-canvas").mousemove(function(event)){
-  cursor.x = event.pageX;
-  cursor.y = event.pageY;
-}
+$("#game-canvas").mousemove( 
+  function(event){
+    cursor.x = event.pageX;
+    cursor.y = event.pageY;
+  }
+);
 
 function draw(){
   ctx.drawImage(bgImg,0,0);
