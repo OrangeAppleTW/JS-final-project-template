@@ -8,7 +8,10 @@ heroImg.src = "images/jason.gif";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower-btn.png";
 var SmallTowerImg = document.createElement("img");
-SmallTowerImg.src = "images/tower.png"
+SmallTowerImg.src = "images/tower.png";
+
+var isBuilding = false;
+
 
 var hero = {
   x: 0,
@@ -18,12 +21,23 @@ var hero = {
 var cursor = {
   x: 0, 
   y: 0 
+};
+
+var tower = {
+  x: 0, 
+  y: 0 
+};
+
+if(isBuilding = true){
+  SmallTowerImg.show();
+}else{
+  SmallTowerImg.hide();
 }
 
 $("#game-canvas").mousemove( 
   function(event){
-    cursor.x = event.pageX;
-    cursor.y = event.pageY;
+    cursor.x = event.offsetX;
+    cursor.y = event.offsetY;
   }
 );
 
