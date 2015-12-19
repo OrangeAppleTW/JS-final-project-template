@@ -29,7 +29,7 @@ function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 575, 400, 64, 64 );
-  ctx.drawImage(SmallTowerImage, cursor.x, cursor.y);
+  ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
 }
 
 
