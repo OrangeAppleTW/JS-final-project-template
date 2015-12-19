@@ -28,7 +28,7 @@ var tower = {
   y: 0 
 };
 
-if(isBuilding = true){
+if(isBuilding === true){
   $("#SmallTowerImg").show();
 }else{
   $("#SmallTowerImg").hide();
