@@ -16,7 +16,7 @@ var hero = {
 function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
-  ctx.drawImage(towerImg, 575, 375, 64, 64 );
+  ctx.drawImage(towerImg, 575, 400, 64, 64 );
 }
 
 // setTimeout(draw,1000);
