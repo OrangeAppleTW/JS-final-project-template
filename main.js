@@ -29,9 +29,9 @@ var tower = {
 };
 
 if(isBuilding = true){
-  SmallTowerImg.show();
+  $("#SmallTowerImg").show();
 }else{
-  SmallTowerImg.hide();
+  $("#SmallTowerImg").hide();
 }
 
 $("#game-canvas").mousemove( 
