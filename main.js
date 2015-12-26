@@ -18,7 +18,7 @@ $("#game-canvas").click(
     if(cursor.x > 0 && cursor.x < 64 && cursor.y > 0 && cursor.y < 64){
       isBuilding = !isBuilding
     }
-    if (isBuilding === false){
+    if (isBuilding === true){
       tower.x = cursor.x;
       tower.y = cursor.y;
     }
