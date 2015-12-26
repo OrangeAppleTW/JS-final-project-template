@@ -18,6 +18,10 @@ $("#game-canvas").click(
     if(cursor.x > 0 && cursor.x < 64 && cursor.y > 0 && cursor.y < 64){
       isBuilding = !isBuilding
     }
+    if (isBuilding === false){
+      tower.x = cursor.x;
+      tower.y = cursor.y;
+    }
   }
 );
 
@@ -38,23 +42,15 @@ var tower = {
   y: 0 
 };
 
-if(isBuilding === true){
-  $("#SmallTowerImg").show();
-}
-
 $("#game-canvas").mousemove( 
-  function(event){
+   function(event){
     cursor.x = event.offsetX;
     cursor.y = event.offsetY;
-  }
-);
+    }
+  );
+  
 
-if(isBuilding === false){
-  tower.x = cursor.x 
-  tower.y = cursor.y 
-}
-
-function draw(){
+function draw()
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
