@@ -9,6 +9,8 @@ var towerImg = document.createElement("img");
 towerImg.src = "images/tower-btn.png";
 var SmallTowerImg = document.createElement("img");
 SmallTowerImg.src = "images/tower.png";
+var SmallTowerImg2 = document.createElement("img");
+SmallTowerImg2.src = "images/tower.png"; 
 
 var isBuilding = false;
 $("#game-canvas").click(
@@ -18,6 +20,7 @@ $("#game-canvas").click(
     }
   }
 );
+
 
 
 var hero = {
@@ -37,8 +40,6 @@ var tower = {
 
 if(isBuilding === true){
   $("#SmallTowerImg").show();
-}else{
-  $("#SmallTowerImg").hide();
 }
 
 $("#game-canvas").mousemove( 
@@ -48,12 +49,20 @@ $("#game-canvas").mousemove(
   }
 );
 
+if(isBuilding === false){
+  tower.x = cursor.x 
+  tower.y = cursor.y 
+}
+
 function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
   if(isBuilding === true){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
+  }
+  if(isBuilding === false){
+    ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
   }
 }
 
